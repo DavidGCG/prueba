@@ -1,106 +1,111 @@
-# Título del Proyecto
+# Proyecto robot moviles
 
-_Acá va un párrafo que describa lo que es el proyecto_
+## Estructura del Proyecto
 
-## Comenzando 🚀
+#### Control por gestos para:
+1. que el robot siga la mano y mapee. Durante el mapeado puedes guardar waypoints con un gesto
+2. la persona y el robot vuelven a casa, la persona le puede decir que vaya a un waypoint en concreto
+La idea general es poder programar el robot fácilmente con la mano, sin necesidad de programar nada. Una persona sin conocimiento puede crear el mapa y programar al robot con la mano.
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
-Mira **Deployment** para conocer como desplegar el proyecto.
+#### Gestos FIJOS:
+- Iniciar mapeado: el robot entra en estado “mapeado”: sigue ese gesto y va generando el mapa
+- Parar mapeado: el robot sale del estado “mapeado” y guarda el mapa generado para que se use
+- Iniciar trayectoria: A partir de ese gesto el robot concatena los gestos de los waypoints para hacer la planificación de la trayectoria. 
+- Parar trayectoria: Gesto para parar la planificación de la trayectoria. La trayectoria está formada por los waypoints gestualizados entre el gesto de iniciar trayectoria y el gesto de parar trayectoria
+- Guardar waypoint: se detecta si se está en el estado mapeado y guarda un waypoint en la posición del robot. 
 
 
-### Pre-requisitos 📋
+![Texto alternativo](imagenes/grafica.jpeg)
 
-_Que cosas necesitas para instalar el software y como instalarlas_
-
-```
-Da un ejemplo
-```
 
 ### Instalación 🔧
 
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
 
-_Dí cómo será ese paso_
-
-```
-Da un ejemplo
-```
-
-_Y repite_
+_Hay que instalar las sigientes librerias:_
 
 ```
-hasta finalizar
+pip install tk
 ```
 
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
 
 ## Ejecutando las pruebas ⚙️
 
-_Explica como ejecutar las pruebas automatizadas para este sistema_
-
-### Analice las pruebas end-to-end 🔩
-
-_Explica que verifican estas pruebas y por qué_
-
+_1º Es necesario arancar el entorno de ROS, con los siguientes comandos:_
 ```
-Da un ejemplo
+source devel/setup.bash
+```
+```
+roslaunch navigation_stage mi_navigation.launch
 ```
 
-### Y las pruebas de estilo de codificación ⌨️
+_Para que todo el programa funcione es necesario ejecutar los siguientes archivos_
 
-_Explica que verifican estas pruebas y por qué_
+
 
 ```
-Da un ejemplo
+python mapa_rviz.py
+```
+```
+python VentanaGraficaTk.py
 ```
 
-## Despliegue 📦
+## Verciones de la ventana grafica:📟
+### Vercion 1:
+```
+VentanaGraficaTk.py
+```
 
-_Agrega notas adicionales sobre como hacer deploy_
+<p align="center">
+  <img src="imagenes/V_1.png" width="600" height="400" alt="Descripción de la imagen">
+</p>
 
-## Construido con 🛠️
+### Vercion 2:
+```
+interface_2.py
+```
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
+<p align="center">
+  <img src="imagenes/V_2.png" width="600" height="400" alt="Descripción de la imagen">
+</p>
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
-* [Maven](https://maven.apache.org/) - Manejador de dependencias
-* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
 
-## Contribuyendo 🖇️
+## Poner el marcha el robot real
+1º Devbemos sabre cual es la IP de nuestro HOST, con el siguiente comando 
 
-Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
+```
+ifconfig | grep -oE 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -oE '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'
+```
 
-## Wiki 📖
+2º Se debe acceder al path, y cambiar ingresalr la IP del robot y la del HOST
+```
+nano .bashrc
+```
 
-Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
+3º Se accede por SSH al Turtlebot
 
-## Versionado 📌
+```
+ ssh tb2@192.168.1.9
+```
+(Se tiene que cambiar la IP, por la que coresponda a nuestro robot)
+La contraseña es: ros
 
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
+4º En una nueva terminal por la que nos conectamos por SSH, como se ha explicado anteriormente, se ejecuta el aranque minimo del robot
+```
+roslaunch turtlebot_bringup minimal.launch
+```
+Si se deseara arancar el laser, en otra terminal se ejecutaria el siguiente comando:
+```
+roslaunch turtlebot_bringup hokuyo_ust10lx.launch
+```
+
 
 ## Autores ✒️
 
 _Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
 
-* **Andrés Villanueva** - *Trabajo Inicial* - [villanuevand](https://github.com/villanuevand)
-* **Fulanito Detal** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
+* **Natalia** - *Trabajo Inicial* - 
+* **Celia** - *Documentación*
+* **Borja** - *Documentación*
+* **David** - *Documentación* 
 
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
-
-## Licencia 📄
-
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
-
-## Expresiones de Gratitud 🎁
-
-* Comenta a otros sobre este proyecto 📢
-* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
-* Da las gracias públicamente 🤓.
-* Dona con cripto a esta dirección: `0xf253fc233333078436d111175e5a76a649890000`
-* etc.
-
-
-
----
-⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊
