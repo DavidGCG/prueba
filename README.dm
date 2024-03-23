@@ -15,9 +15,9 @@ La idea general es poder programar el robot fácilmente con la mano, sin necesid
 - Parar trayectoria: Gesto para parar la planificación de la trayectoria. La trayectoria está formada por los waypoints gestualizados entre el gesto de iniciar trayectoria y el gesto de parar trayectoria
 - Guardar waypoint: se detecta si se está en el estado mapeado y guarda un waypoint en la posición del robot. 
 
-
+```
 ![Texto alternativo](imagenes/grafica.jpeg)
-
+```
 
 ### Instalación 🔧
 
@@ -55,20 +55,21 @@ python VentanaGraficaTk.py
 ```
 VentanaGraficaTk.py
 ```
-
+```
 <p align="center">
   <img src="imagenes/V_1.png" width="600" height="400" alt="Descripción de la imagen">
 </p>
+```
 
 ### Vercion 2:
 ```
 interface_2.py
 ```
-
+```
 <p align="center">
   <img src="imagenes/V_2.png" width="600" height="400" alt="Descripción de la imagen">
 </p>
-
+```
 
 ## Poner el marcha el robot real
 1º Devbemos sabre cual es la IP de nuestro HOST, con el siguiente comando 
