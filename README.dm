@@ -13,4 +13,4 @@ Canal de Yotube: https://www.youtube.com/c/BitwiseAr
 
 En el canal de YouTube arriba mencionado se encuentra la explicación paso a paso sobre el principio de funcionamiento del dispositivo o sensor, el circuito de conexión, esquemáticos y diagramas, como asi también enlaces a librerías necesarias dependiendo el caso.
 
-### ¡ Saludos !
+### ¡ Saludos hola!
