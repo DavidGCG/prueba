@@ -1,16 +1,106 @@
-# Curso Arduino desde cero en Español
+# Título del Proyecto
 
-Código fuente de programas vistos en el Curso de Arduino desde Cero en Español.
+_Acá va un párrafo que describa lo que es el proyecto_
 
-Canal de Yotube: https://www.youtube.com/c/BitwiseAr
+## Comenzando 🚀
+
+_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
+
+Mira **Deployment** para conocer como desplegar el proyecto.
 
 
-- Ingresá a la carpeta del número de capítulo que desees descargar el código de los programas.
-- Cada programa se encuentra en formato .txt de manera que podrás hacer clic y verlo en el navegador.
-- Es importante que desactives la traducción automática de Inglés a Español ya que sino el código será traducido y por ende inutilizable.
-- Podrás seleccionar el código, copiarlo y pegarlo en el editor del IDE.
-- Podrás descargar el archivo de texto y luego abrirlo de forma local en tu computadora.
+### Pre-requisitos 📋
 
-En el canal de YouTube arriba mencionado se encuentra la explicación paso a paso sobre el principio de funcionamiento del dispositivo o sensor, el circuito de conexión, esquemáticos y diagramas, como asi también enlaces a librerías necesarias dependiendo el caso.
+_Que cosas necesitas para instalar el software y como instalarlas_
 
-### ¡ Saludos hola!
+```
+Da un ejemplo
+```
+
+### Instalación 🔧
+
+_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
+
+_Dí cómo será ese paso_
+
+```
+Da un ejemplo
+```
+
+_Y repite_
+
+```
+hasta finalizar
+```
+
+_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
+
+## Ejecutando las pruebas ⚙️
+
+_Explica como ejecutar las pruebas automatizadas para este sistema_
+
+### Analice las pruebas end-to-end 🔩
+
+_Explica que verifican estas pruebas y por qué_
+
+```
+Da un ejemplo
+```
+
+### Y las pruebas de estilo de codificación ⌨️
+
+_Explica que verifican estas pruebas y por qué_
+
+```
+Da un ejemplo
+```
+
+## Despliegue 📦
+
+_Agrega notas adicionales sobre como hacer deploy_
+
+## Construido con 🛠️
+
+_Menciona las herramientas que utilizaste para crear tu proyecto_
+
+* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
+* [Maven](https://maven.apache.org/) - Manejador de dependencias
+* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
+
+## Contribuyendo 🖇️
+
+Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
+
+## Wiki 📖
+
+Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
+
+## Versionado 📌
+
+Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
+
+## Autores ✒️
+
+_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
+
+* **Andrés Villanueva** - *Trabajo Inicial* - [villanuevand](https://github.com/villanuevand)
+* **Fulanito Detal** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
+
+También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
+
+## Licencia 📄
+
+Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
+
+## Expresiones de Gratitud 🎁
+
+* Comenta a otros sobre este proyecto 📢
+* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
+* Da las gracias públicamente 🤓.
+* Dona con cripto a esta dirección: `0xf253fc233333078436d111175e5a76a649890000`
+* etc.
+
+
+
+---
+⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊
